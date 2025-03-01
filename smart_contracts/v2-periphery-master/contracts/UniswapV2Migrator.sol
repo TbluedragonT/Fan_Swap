@@ -18,7 +18,7 @@ contract UniswapV2Migrator is IUniswapV2Migrator {
     }
 
     // needs to accept ETH from any v1 exchange and the router. ideally this could be enforced, as in the router,
-    // but it's not possible because it requires a call to the v1 factory, which takes too much gas
+    /// but it's not possible because it requires a call to the v1 factory, which takes too much gas
     receive() external payable {}
 
     function migrate(address token, uint amountTokenMin, uint amountETHMin, address to, uint deadline)
